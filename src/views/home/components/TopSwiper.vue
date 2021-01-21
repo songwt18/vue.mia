@@ -34,7 +34,13 @@
         },
         imgList: [
             {
-                path:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQWYqPG85_KcCgw8-7OJnVaxlMXsXX51E1OQ&usqp=CAU"
+                path:"https://img.miyabaobei.com/d1/p6/2021/01/11/7d/8e/7d8e17aa63dbf2752cf538e4101c3849468269142.jpg"
+            },
+            {
+                path:"https://img.miyabaobei.com/d1/p6/2021/01/11/27/4c/274c73ee4350027457a15af4c4fa5df5484918685.jpg"
+            },
+            {
+                path:"https://img.miyabaobei.com/d1/p6/2021/01/12/ec/e1/ece1394069c6a6b9ed89ca4720c6cb41589372130.jpg"
             }
         ]
       }
@@ -45,7 +51,6 @@
       }
     },
     mounted() {
-      console.log('11111111')
     }
   }
 </script>

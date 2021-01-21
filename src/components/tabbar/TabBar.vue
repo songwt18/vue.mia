@@ -15,6 +15,7 @@ export default {
 #tabbar {
     height: 2.5rem;
     border-top: 1px solid #ebebeb;
+    background-color: #ffffff;
     position: fixed;
     bottom: 0;
     left: 0;

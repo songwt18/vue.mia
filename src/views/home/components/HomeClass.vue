@@ -28,7 +28,7 @@ export default {
     position: relative;
     width: 95%;
     margin: 0 auto;
-    height: 1.8rem;
+    height: 3rem;
     .homeClassInner {
         position: absolute;
         display: flex;
@@ -37,7 +37,7 @@ export default {
         border-radius: 25px;
         box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
         background-color: #fff;
-        top: -1.2rem;
+        top: 0;
         z-index: 9;
         .itemclass{
             flex: 1;

@@ -17,19 +17,14 @@ export default {
 <style lang="less" scoped>
 #top-search {
     height: 2.45rem;
-    // background-color: #d84f48;
+    background-color: #d84f48;
     display: flex;
-    position: fixed;
-    z-index: 99;
-    left: 0;
-    right: 0;
-    top: 0;
     .search-input {
         display: flex;
         flex: 6;
         margin: 0.4rem;
         border-radius: 1rem;
-        background-color: rgba(255, 255, 255, .75);
+        background-color: rgba(255, 255, 255);
         .input-icon {
             flex: 1;
             line-height: 1.65rem;
