@@ -1,20 +1,23 @@
 <template>
   <div class="home">
-      <top-search/>
-      <Scroll
-        class="wrapper"
-        ref="scroll"
-        @scroll="getPosition"
-        :probeType=3
-      >
-        <top-swiper/>
-        <home-class/>
-        <home-news/>
-        <home-discount/>
-        <home-bt/>
-        <home-ms/>
-        <home-tm/>
-      </Scroll>
+      <div class="homeContent">
+        <img src="~assets/img/home/homeBg.jpg" alt="" v-show="showImg">
+        <top-search :showImg="showImg"/>
+        <Scroll
+          class="wrapper"
+          ref="scroll"
+          @scroll="getPosition"
+          :probeType=3
+        >
+          <top-swiper/>
+          <home-class/>
+          <home-news/>
+          <home-discount/>
+          <home-bt/>
+          <home-ms/>
+          <home-tm/>
+        </Scroll>
+      </div>
   </div>
 </template>
 
@@ -29,6 +32,12 @@ import HomeBt from './components/HomeBt'
 import HomeMs from './components/HomeMs'
 import HomeTm from './components/HomeTm'
 export default {
+  data() { 
+    return {
+      wHeight: 0,
+      showImg: true,
+    }
+  },
   components: {
     Scroll,
     TopSearch,
@@ -38,14 +47,20 @@ export default {
     HomeDiscount,
     HomeBt,
     HomeMs,
-    HomeTm
+    HomeTm,
   },
   methods: {
-    getPosition() {
-      // 获取当前滚动距离
-      // console.log(position)
+    // 监听better-scroll的滚动距离
+    getPosition(position) {
+      if(position.y < 0) {
+        this.showImg = false
+      }else{
+        this.showImg = true
+      }
     }
   },
+  created() {
+  }
 }
 </script>
 
@@ -53,13 +68,21 @@ export default {
 .home {
   position: relative;
   height: 100vh;
-  .wrapper {
-    top: 2.45rem;
-    bottom: 2.5rem;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    position: absolute;
+  .homeContent {
+    img {
+      width: 100%;
+    }
+    .wrapper {
+      top: 2.45rem;
+      bottom: 2.5rem;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      position: absolute;
+      .addDiv {
+        height: 2.5rem;
+      }
+    }
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div id="top-search">
-      <div class="search-input">
+  <div class="top-search" :class="{showImage:!showImg}">
+      <div class="search-input" @click="toSearch">
           <div class="input-icon iconfont icon-search"></div>
           <div class="input-text">学习机</div>
       </div>
@@ -10,15 +10,28 @@
 
 <script>
 export default {
-
+    props: {
+        showImg: {
+            type: Boolean,
+            default: true,
+        }
+    },
+    methods: {
+        toSearch() {
+            console.log(this.showImg)
+        }
+    }
 }
 </script>
 
 <style lang="less" scoped>
-#top-search {
+.top-search {
     height: 2.45rem;
-    background-color: #d84f48;
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     .search-input {
         display: flex;
         flex: 6;
@@ -47,5 +60,8 @@ export default {
         line-height: 2.45rem;
         color: #ffffff;
     }
+}
+.showImage {
+    background-color: #d84f48;
 }
 </style>
