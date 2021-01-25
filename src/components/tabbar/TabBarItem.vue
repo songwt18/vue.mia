@@ -21,7 +21,6 @@ export default {
         itemClick(){
             this.$router.replace(this.path)
             this.isClick = false
-            console.log('11')
         }
     },
     computed:{

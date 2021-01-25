@@ -68,6 +68,7 @@ export default {
 .home {
   position: relative;
   height: 100vh;
+  background-color: #f5f5f5;
   .homeContent {
     img {
       width: 100%;
