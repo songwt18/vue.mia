@@ -18,7 +18,8 @@ export default {
     },
     methods: {
         toSearch() {
-            console.log(this.showImg)
+            // 跳转到搜索页面
+            this.$router.replace('/search')
         }
     }
 }

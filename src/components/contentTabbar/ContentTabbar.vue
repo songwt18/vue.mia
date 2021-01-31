@@ -1,5 +1,5 @@
 <template>
-  <div id="contentTabbar">
+  <div id="contentTabbar" v-show="ifUse">
       <tab-bar>
         <tab-bar-item path="/home">
             <div slot="item-icon" class="iconfont icon-home"></div>
@@ -26,9 +26,28 @@
 import TabBar from '../tabbar/TabBar';
 import TabBarItem from '../tabbar/TabBarItem';
 export default {
+    data() {
+        return {
+            links:[
+                ['home','首页'],
+                ['categories','分类'],
+                ['cart','购物车'],
+                ['profile','我的'],
+            ]
+        }
+    },
     components: {
         TabBar,
         TabBarItem
+    },
+    created() {
+        console.log(this.$route.path)
+    },
+    computed: {
+        ifUse(){
+            let path = this.$route.path.substr(1)
+            return this.links.find(link => (link[0] === path))
+        }
     }
 }
 </script>
