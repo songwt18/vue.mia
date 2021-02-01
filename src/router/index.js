@@ -5,7 +5,8 @@ const Home = () => import('../views/home/Home');
 const Categories = () => import('../views/categories/Categories');
 const Cart = () => import('../views/cart/Cart');
 const Profile = () => import('../views/profile/Profile');
-const Search = () => import('../views/search/Search')
+const Search = () => import('../views/search/Search');
+const SearchResult = () => import('../views/search/components/SearchResult')
 
 Vue.use(Router);
 
@@ -15,7 +16,8 @@ const routes = [
     {path:'/categories',component:Categories},
     {path:'/cart',component:Cart},
     {path:'/profile',component:Profile},
-    {path:'/search',component:Search}
+    {path:'/search',component:Search},
+    {path:'/searchresult',component:SearchResult}
 ]
    
 export default new Router({

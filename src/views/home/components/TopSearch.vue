@@ -19,7 +19,7 @@ export default {
     methods: {
         toSearch() {
             // 跳转到搜索页面
-            this.$router.replace('/search')
+            this.$router.push('/search')
         }
     }
 }
