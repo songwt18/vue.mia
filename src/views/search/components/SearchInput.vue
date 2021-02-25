@@ -45,7 +45,7 @@ export default {
         clickBtn() {
             if(this.inputText){
                 this.addHistory(this.inputText)
-                this.$router.push('./searchresult')
+                this.$router.push('/searchresult')
                 this.HistoryList = []
                 // if(!this.ifShowHis) {
                 //     console.log('22')
